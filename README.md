@@ -7,7 +7,7 @@ A Magisk / KernelSU module that eliminates the 500 ms audio session lag when res
 
 ## The Problem
 
-WSA's audio bridge between Android and Windows enters a sleep state after approximately 5 minutes of audio inactivity. When media playback resumes, the bridge takes ~500 ms to reopen (`openOutputStream` latency confirmed at 516ms via AudioFlinger). This causes a noticeable stutter and audio/video desync on every cold resume. It may also benefit other virtualized Android environments (such as emulators) where the audio HAL has a high cold-start latency. On physical Android devices, the improvement is unlikely to be noticeable as hardware HAL latency is typically under 50ms.
+WSA's audio bridge between Android and Windows enters a sleep state after approximately 5 minutes of audio inactivity. When media playback resumes, the bridge takes ~500 ms to reopen (`openOutputStream` latency confirmed at 516 ms via AudioFlinger). This causes a noticeable stutter and audio/video desync on every cold resume. It may also benefit other virtualized Android environments (such as emulators) where the audio HAL has a high cold-start latency. On physical Android devices, the improvement is unlikely to be noticeable as hardware HAL latency is typically under 50 ms.
 
 ## What It Does
 
