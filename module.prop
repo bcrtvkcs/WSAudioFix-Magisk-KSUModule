@@ -1,0 +1,7 @@
+id=WSAudioFix
+name=WSAudioFix
+version=v1.0.0
+versionCode=1
+author=BCRTVKCS
+description=Prevents audio bridge standby to eliminate 500 ms session lag on resume.
+updateJson=https://raw.githubusercontent.com/bcrtvkcs/WSAudioFix-Magisk-KSUModule/main/update.json

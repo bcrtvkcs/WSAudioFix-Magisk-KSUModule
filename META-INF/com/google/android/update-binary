@@ -1,0 +1,10 @@
+#!/sbin/sh
+SKIPUNZIP=1
+extract() { unzip -o "$ZIPFILE" "$1" -d "$MODPATH" >/dev/null 2>&1; }
+ui_print() { echo "$1"; }
+ui_print "- Installing WSA Audio Keepalive..."
+mkdir -p "$MODPATH"
+unzip -o "$ZIPFILE" 'audio_keepalive.dex' -d "$MODPATH" >/dev/null 2>&1
+unzip -o "$ZIPFILE" 'service.sh' -d "$MODPATH" >/dev/null 2>&1
+chmod 755 "$MODPATH/service.sh"
+ui_print "- Done."
